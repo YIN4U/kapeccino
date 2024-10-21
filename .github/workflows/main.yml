@@ -4,10 +4,10 @@ jobs:
   build-node:
     runs-on: ubuntu-latest
     container:
-      image: node:16
+      image: node:18
     steps:
       - run: node --version
-      - run: npm --version
+      - run: npm update
       - uses: actions/checkout@v4
       - run: npm install
       - run: node index.js
